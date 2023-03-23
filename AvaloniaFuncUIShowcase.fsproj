@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Home.fs" />
+    <Compile Include="About.fs" />
+    <Compile Include="Buttons.fs" />
+    <Compile Include="Borders.fs" />
+    <Compile Include="Main.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.12" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.12" />
+    <PackageReference Include="JaggerJo.Avalonia.FuncUI" Version="0.5.0" />
+    <PackageReference Include="JaggerJo.Avalonia.FuncUI.DSL" Version="0.5.0" />
+    <PackageReference Include="JaggerJo.Avalonia.FuncUI.Elmish" Version="0.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove=".template.config\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="assets\search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
